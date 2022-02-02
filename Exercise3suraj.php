@@ -8,7 +8,7 @@
 </head>
 <style>
     body{
-        color: #4169E1;
+        color: #994A1D;
         font-family:Times New Roman (serif);
 
     }
@@ -51,8 +51,8 @@
 
     <h1>Exercise 3 <br> Suraj Kharel</h2>
 
-    <h2>Task 1 </h2>
-    <h3>Use IF else
+ 
+    <h3>
 
     1. Write a script that gets the current month and prints one of the following responses, depending on whether it's August or not:
 
@@ -61,27 +61,106 @@
 
     You can use date(F) function to get the current month name</h3>
     <?php
+    $d = date("F");
+    if ($d == "August"){
+        echo "It's August, so it's still holiday. <br>";
+    }
+    else {
+        echo "Not August, This is Month-$d so I don't have any holidays <br>";
+    }
+    ?>
+
+   
+    <h3>2. Assign color red to a variable name $color and check to print one the following responses using if else statement 
+
+        The color is red. 
+
+        The color is not red. </h3>
+    <?php
+     $color = "red";
+     if ($color == "red"){
+         echo "The color is red. <br>";
+     }
+     else {
+         echo "The color is not red. <br>";
+     }
+    ?>
     
-    ?>
-
-    <h2> Task 2 </h2>
-    <h3> Assign color red to a variable name $color and check to print one the following responses using if else statement 
-
-        The color is red. 
-
-        The color is not red. </h3>
+    <h3>3. Write a program to grade students based on their total score for a subject. 
+        The grading scheme is: Excellent : >80 ;Great >70 & less than 80;Good >60 & less than 70; Pass >50 & less than 60 & Fail <50</h3>
     <?php
-   
+           $score = 99;
+           if ($score >=80 ){
+               echo "Excellent <br>";
+           }
+           elseif ($score >=70){
+               echo "Great<br>";
+           }
+           elseif ($score >= 60){
+               echo "Good<br>";
+           }
+           elseif ($score >= 50){
+            echo "Pass<br>";
+           }
+           else {
+            echo "Fail <br>";
+        }
     ?>
-    <h2> Task 3 </h2>
-    <h3> Assign color red to a variable name $color and check to print one the following responses using if else statement 
+    <h3>4. Write a program to get inputs (age and name) from the user and based on their age, 
+        decide if he/she is eligible for voting. (18 or more than 18 years is eligible for voting.) </h3>
+        
 
-        The color is red. 
+        <form action = "Exercise3suraj.php" method="get">
+            Name: <input type = "text" name="name"> 
+            Age: <input type = "number" name="age">
+            <input type = "submit">
+        </form>
 
-        The color is not red. </h3>
-    <?php
-   
-    ?>
+        <?php 
+         
+         if ($_GET['age'] >=18){
+             echo "You are eligible for voting";
+         }
+         else{
+             echo"You are not eligible for voting";
+         }
+        ?>
+
+    <h3> 5. Use a looping statement to construct the following pattern: <br>
+
+            12345678 <br>
+            1234567 <br>
+            123456<br>
+            12345<br>
+            1234<br>
+            123<br>
+            12<br>
+            1 </h3>
+        <?php
+            for($i=8;$i>=1;$i--){
+            for($j=1;$j<=$i;$j++){
+            echo " $j ";
+            }
+            echo '</br>';}
+        ?>
+        <h3> 6. Use While loop to print the following pattern: <br>
+                *<br>
+                **<br>
+                ***<br>
+                ****<br>
+                *****<br>
+                ******<br>
+                *******<br>
+                ********</h3>
+            <?php
+            for ($i=1; $i<=8; $i++){
+                for($j=0; $j<$i; $j++){
+                    echo "*";
+                }
+                echo "<br/>";
+            }
+            
+            ?>
 </body>
     </div>
 </html>

@@ -73,6 +73,15 @@
     <?php
    
     ?>
+    <h2> Task 3 </h2>
+    <h3> Assign color red to a variable name $color and check to print one the following responses using if else statement 
+
+        The color is red. 
+
+        The color is not red. </h3>
+    <?php
+   
+    ?>
 </body>
     </div>
 </html>
